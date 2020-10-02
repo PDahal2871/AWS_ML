@@ -48,19 +48,19 @@ def view(request, id):
 
 
         Sunglass = str(face['Sunglasses']['Value'])
-        if(Sunglass == True):
+        if(Sunglass == "true"):
             Sg = 'Have Sunglasses'
         else:
             Sg = "Dont have Sunglasses"
 
         Mustache = str(face['Mustache']['Value'])
-        if(Mustache == True):
+        if(Mustache == "true"):
             Mt = "Have Mustache"
         else:
             Mt = "Dont have Mustache"
 
         Beard = str(face['Beard']['Value'])
-        if (Beard == True):
+        if (Beard == "true"):
             beard = "Have Beard"
         else:
             beard = "Dont have Beard"
