@@ -5,9 +5,6 @@
 # Images
 <img src="https://github.com/PDahal2871/AWS_ML/blob/main/awsrek/Screenshot%20(183).png" width=1000px, height=660px>
 
-<br>
-<br>
-<br>
 
 <img src="https://github.com/PDahal2871/AWS_ML/blob/main/awsrek/Screenshot%20(184).png" width=1000px, height=660px>
 
