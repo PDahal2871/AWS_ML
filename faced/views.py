@@ -48,27 +48,27 @@ def view(request, id):
 
 
         Sunglass = str(face['Sunglasses']['Value'])
-        if(Sunglass == "true"):
+        if(Sunglass == "True"):
             Sg = 'Have Sunglasses'
         else:
             Sg = "Dont have Sunglasses"
 
         Mustache = str(face['Mustache']['Value'])
-        if(Mustache == "true"):
+        if(Mustache == "True"):
             Mt = "Have Mustache"
         else:
             Mt = "Dont have Mustache"
 
         Beard = str(face['Beard']['Value'])
-        if (Beard == "true"):
-            beard = "Have Beard"
+        if (Beard == "True"):
+            Beard= "Have Beard"
         else:
-            beard = "Dont have Beard"
+            Beard = "Dont have Beard"
 
     print("Image is ", str(image))
     return render(request,'view.html', {'gender' : Gender, 'agerange':Agerange, 'happy':Happy,
                                         'surprised':Surprised, 'sad':Sad, 'calm':Calm, 'angry' : Angry,
-                                        'sg':Sg, 'mt':Mt, 'beard':beard,'image':image})
+                                        'sg':Sg, 'mt':Mt, 'beard':Beard,'image':image})
 
 
 def upload(request):
