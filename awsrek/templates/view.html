@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+        <div class="container">
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <h3 style="color: green">
+                            View Face Details
+                        </h3>
+                    </div>
+            </div>
+            <br>
+            <br>
+           <img src="{{ image.pic.url }}" class="img-responsive" style="width: '350px'; height:'350px'; display: block;
+        margin: 0 auto;" />
+            <br>
+            <br>
+            <table style="background-color: lightcyan" class="table table-bordered">
+                <tbody>
+                    <tr><th>Gender </th><td>{{gender}}</td></tr>
+                    <tr><th>Age Range</th><td>{{agerange}}</td></tr>
+                    <tr><th>Happy </th><td>{{happy}}</td></tr>
+                    <tr><th>Age Range</th><td>{{surprised}}</td></tr>
+                    <tr><th>Sad </th><td>{{sad}}</td></tr>
+                    <tr><th>Calm </th><td>{{calm}}</td></tr>
+                    <tr><th>Angry </th><td>{{angry}}</td></tr>
+                    <tr><th>Sunglasses </th><td>{{sg}}</td></tr>
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>

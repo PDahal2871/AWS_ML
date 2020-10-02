@@ -1,0 +1,82 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    {% load static %}-->
+<!--    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>-->
+<!--</head>-->
+<!--<body>-->
+<!--{% for image in images %}-->
+<!--            <div class="col-md-4">-->
+<!--                <p> hell {{image.pic}}</p>-->
+<!--                <form action="/view/{{image.id}}" method="post" style="margin-left: 30px">-->
+<!--                            {% csrf_token %}-->
+<!--                            <button class="btn btn-success">View Details</button>-->
+<!--                        </form>-->
+<!--            </div>-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        {%  endfor %}-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Images</title>
+    <style>
+    .outer-wrapper{
+        display: inline-block;
+        margin: 20px;
+    }
+    .frame{
+        width: 250px;
+        height: 200px;
+        border: 1px solid black;
+        vertical-align: middle;
+        text-align: center;
+        display: table-cell;
+    }
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+</head>
+<body>
+
+{% for image in images %}
+<div class="outer-wrapper">
+    <div class="frame">
+        <img src="{{ image.pic.url }}" class="img-responsive" style="width: '350px'; height:'350px'; display: block;
+        margin: 0 auto;" />
+    </div>
+    <div style="display: flex;">
+
+        <form action="/view/{{image.id}}" method="post" style="margin-left: 14px; margin-top: 5px">
+            {% csrf_token %}
+            <button class="btn btn-success">View Details</button>
+        </form>
+        <form onsubmit="return confirm('Are you sure?');" action="/delete/{{image.id}}" method="post" style="margin-left: 50px; margin-top: 5px">
+            {% csrf_token %}
+            <button name="deleteuser"  class="btn btn-danger" value="User Deleted Successfully">Delete</button>
+        </form>
+    </div>
+    <br>
+</div>
+
+{% endfor %}
+
+</body>
+</html>
