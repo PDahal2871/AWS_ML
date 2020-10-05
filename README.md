@@ -1,4 +1,4 @@
-# AWS_ML
+# AWS_Rekognition
 ### This repo contains the Django app which uses boto3 to fetch the face details values from the aws rekognition server. Photos can be deleted and viewed. Emotions of the faces in that images can be found by clicking view details button. You can upload your own photo and find out the emotions of that photo.
 <br>
 
